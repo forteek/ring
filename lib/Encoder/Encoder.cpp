@@ -1,8 +1,8 @@
 #include "Encoder.h"
 
 Encoder::Encoder(uint8_t clkPin, uint8_t dtPin, uint8_t swPin) : clkPin(clkPin), dtPin(dtPin), button(swPin, LOW) {
-    pinMode(clkPin, INPUT_PULLUP);
-    pinMode(dtPin, INPUT_PULLUP);
+    pinMode(clkPin, INPUT);
+    pinMode(dtPin, INPUT);
 
     this->value = 0;
     this->changed = false;
