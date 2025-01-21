@@ -1,7 +1,3 @@
-//
-// Created by Marcin Fortuniak on 20/01/2025.
-//
-
 #include "Menu.h"
 
 void Menu::init(
@@ -26,9 +22,14 @@ void Menu::init(
         display->println(item.name.c_str());
     }
     display->display();
+    this->isInitialized = true;
 }
 
 void Menu::loop() {
+    if (!isInitialized) {
+        return;
+    }
+
     button->tick();
     int16_t encoderValue = encoder->getCount();
     if (encoderValue != 0) {
@@ -37,10 +38,4 @@ void Menu::loop() {
 }
 
 void Menu::draw() {
-    // display->clearDisplay();
-    // display->setTextSize(1);
-    // display->setTextColor(WHITE);
-    // display->setCursor(0, 0);
-    // display->println("Menu");
-    // display->display();
 }

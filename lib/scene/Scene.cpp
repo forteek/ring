@@ -1,7 +1,3 @@
-//
-// Created by Marcin Fortuniak on 20/01/2025.
-//
-
 #include "Scene.h"
 
 void Scene::init(Adafruit_SSD1306* display, ESP32Encoder* encoder, OneButton* button) {

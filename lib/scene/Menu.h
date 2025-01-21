@@ -1,7 +1,3 @@
-//
-// Created by Marcin Fortuniak on 20/01/2025.
-//
-
 #ifndef MENU_H
 #define MENU_H
 
@@ -28,6 +24,7 @@ public:
     void draw();
 private:
     std::vector<MenuItem> items;
+    bool isInitialized = false;
 };
 
 #endif //MENU_H
